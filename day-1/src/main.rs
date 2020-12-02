@@ -7,5 +7,5 @@ fn main() {
     let content = read_to_string("input").unwrap();
     let report: ExpenseReport = content.parse().unwrap();
 
-    println!("Code: {}", report.check());
+    println!("Code: {}", report.check3());
 }

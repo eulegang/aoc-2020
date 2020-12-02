@@ -19,6 +19,23 @@ impl ExpenseReport {
 
         0
     }
+
+    pub fn check3(&self) -> usize {
+        for (i, a) in self.expenses.iter().enumerate() {
+            for n in i + 1..self.expenses.len() {
+                let b = self.expenses[n];
+                for j in n + 1..self.expenses.len() {
+                    let c = self.expenses[j];
+
+                    if a + b + c == 2020 {
+                        return a * b * c;
+                    }
+                }
+            }
+        }
+
+        0
+    }
 }
 
 impl FromStr for ExpenseReport {
